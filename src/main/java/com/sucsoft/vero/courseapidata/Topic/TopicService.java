@@ -23,8 +23,7 @@ public class TopicService {
         * forEach(topics::add) will add for each of the element
         * in interable will be added to the list topics*/
         List<Topic> topics = new ArrayList<>();
-        topicRepository.findAll()
-                .forEach(topics::add);
+        topicRepository.findAll().forEach(topics::add);
         return topics;
     }
 

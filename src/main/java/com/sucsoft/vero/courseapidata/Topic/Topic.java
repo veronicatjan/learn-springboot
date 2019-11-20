@@ -2,6 +2,9 @@ package com.sucsoft.vero.courseapidata.Topic;
 
 //This is the class that we need to turn into entity
 
+import io.swagger.annotations.ApiModelProperty;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -10,8 +13,16 @@ public class Topic {
 
     //For primary keys annotate with @Id
     @Id
+    @ApiModelProperty("主键")
+    @Column(name = "ID", columnDefinition = ("varchar(64) COMMENT '主键"))
     private String id;
+
+    @ApiModelProperty("话题名称")
+    @Column(name = "NAME", columnDefinition = ("varchar(255) default null COMMENT '话题名称'"))
     private String name;
+
+    @ApiModelProperty("话题描述")
+    @Column(name = "DESCRIPTION", columnDefinition = ("varchar(255) default null COMMENT '话题描述'"))
     private String description;
 
     public Topic() {
