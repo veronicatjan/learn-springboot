@@ -1,14 +1,18 @@
-package com.sucsoft.vero.courseapidata.Topic;
+package com.sucsoft.vero.courseapidata.topic;
 
 //This is the class that we need to turn into entity
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Topic")
+@ApiModel("话题 - Topic")
 public class Topic {
 
     //For primary keys annotate with @Id

@@ -1,4 +1,4 @@
-package com.sucsoft.vero.courseapidata.Topic;
+package com.sucsoft.vero.courseapidata.topic;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ public class TopicController {
     private TopicService topicService;
 
     @ApiOperation(value = "API-话题-获取所有话题")
-//    @RequestMapping("/topics")
     @GetMapping("/topics")
     public List<Topic> getAllTopics() {
         return topicService.getAllTopics();
@@ -28,21 +27,18 @@ public class TopicController {
     }
 
     @ApiOperation(value = "API-话题-添加话题")
-//    @RequestMapping(method = RequestMethod.POST, value = "/topics")
     @PostMapping("/topics")
     public void addTopic(@RequestBody Topic topic) {
         topicService.addTopic(topic);
     }
 
     @ApiOperation(value = "API-话题-更新话题")
-//    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
     @PutMapping("/topics/{id}")
     public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
         topicService.updateTopic(topic, id);
     }
 
     @ApiOperation(value = "API-话题-删除话题")
-//    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
     @DeleteMapping("/topics/{id}")
     public void deleteTopic(@PathVariable String id) {
         topicService.deleteTopic(id);
