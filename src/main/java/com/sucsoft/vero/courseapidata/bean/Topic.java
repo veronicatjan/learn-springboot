@@ -1,4 +1,4 @@
-package com.sucsoft.vero.courseapidata.topic;
+package com.sucsoft.vero.courseapidata.bean;
 
 //This is the class that we need to turn into entity
 
@@ -10,12 +10,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Topic
+ *
+ * @author veronicatjan
+ * @date 2019/11/20
+ */
 @Entity
 @Table(name = "Topic")
 @ApiModel("话题 - Topic")
 public class Topic {
-
-    //For primary keys annotate with @Id
     @Id
     @ApiModelProperty("主键")
     @Column(name = "ID", columnDefinition = ("varchar(64) COMMENT '主键"))

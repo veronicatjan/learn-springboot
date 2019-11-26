@@ -1,17 +1,23 @@
-package com.sucsoft.vero.courseapidata.topic;
+package com.sucsoft.vero.courseapidata.web;
 
+import com.sucsoft.vero.courseapidata.bean.Topic;
+import com.sucsoft.vero.courseapidata.service.TopicService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * TopicController
+ *
+ * @author veronicatjan
+ * @date 2019/11/20
+ */
 @RestController
 @RequestMapping("/api")
 public class TopicController {
 
-
-    //Declare that this needs dependency injection
     @Autowired
     private TopicService topicService;
 
